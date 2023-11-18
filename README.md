@@ -5,11 +5,12 @@ Duhet të instalohen bibliotekat e kërkuara për të ekzekutuar kodin me sukses
 ```
 import random
 import hashlib
-import qrcode```
+import qrcode
+```
 
 # Definimi
 Në matematikë lakorja e Edwardit është pjesë e lakoreve eliptike
-Ekuacioni i lakorës së Edwardit mbi një fushë K është ```x^2 + y^2 = 1 + dx^2*y^2```
+Ekuacioni i lakorës së Edwardit mbi një fushë K është x^2 + y^2 = 1 + dx^2*y^2
 ```
 p = pow(2, 255) - 19
 a = -1
