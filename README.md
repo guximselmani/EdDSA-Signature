@@ -14,7 +14,8 @@ Ekuacioni i lakorës së Edwardit mbi një fushë K është ```x^2 + y^2 = 1 + d
 p = pow(2, 255) - 19
 a = -1
 d = -121665/121666
-d = (-121665 * pow(121666, -1, p)) % p```
+d = (-121665 * pow(121666, -1, p)) % p
+```
 
 p - prime moduli
 ```p = pow(2, 255) - 19``` është moduli kryesor. Është një numër i madh i thjeshtë që përcakton madhësinë e fushës së fundme mbi të cilën përcaktohet lakorja e Edwardit. Zgjedhja e këtij primi specifik është krijuar për të ofruar një nivel të lartë sigurie.
@@ -39,7 +40,8 @@ Duhet të instalohen bibliotekat e kërkuara për të ekzekutuar kodin me sukses
 ```
 import random
 import hashlib
-import qrcode```
+import qrcode
+```
 
 # Definimi
 Në matematikë lakorja e Edwardit është pjesë e lakoreve eliptike
@@ -48,7 +50,8 @@ Ekuacioni i lakorës së Edwardit mbi një fushë K është x^2 + y^2 = 1 + dx^2
 p = pow(2, 255) - 19
 a = -1
 d = -121665/121666
-d = (-121665 * pow(121666, -1, p)) % p```
+d = (-121665 * pow(121666, -1, p)) % p
+```
 
 p - prime moduli
 ```p = pow(2, 255) - 19``` është moduli kryesor. Është një numër i madh i thjeshtë që përcakton madhësinë e fushës së fundme mbi të cilën përcaktohet lakorja e Edwardit. Zgjedhja e këtij primi specifik është krijuar për të ofruar një nivel të lartë sigurie.
@@ -92,7 +95,8 @@ message = text_to_int("Hi it is done")
 r = hashing(hashing(message) + message) % p
 R = apply_double_and_add_method(G, r, a, d, p)
 h = (R[0] + public_key[0] + message) % p
-s = (r + h + private_key)```
+s = (r + h + private_key)
+```
 
 Nënshkrimi përbëhët prej palëve (R,s) ku R është një pikë në lakore dhe s është një skalarë
 
@@ -101,7 +105,8 @@ Nënshkrimi përbëhët prej palëve (R,s) ku R është një pikë në lakore dh
 h = (R[0] + public_key[0] + message) % p
 P1 = apply_double_and_add_method(G, s, a, d, p)
 P2 = add_points(R, apply_double_and_add_method(public_key, h, a, d, p), a, d, p)
-assert P1[0] == P2[0] and P1[1] == P2[1]```
+assert P1[0] == P2[0] and P1[1] == P2[1]
+```
 
 Bëhet krahasimi i dy pikave në lakore, duke vertetësuar validitetin e nënshkrimit
 
@@ -115,7 +120,8 @@ Gx = 151122213495354007725011514095885315114540126930418572060461132839498477622
 u=9
 
 G = (Gx, Gy)
-assert (a*Gx*Gx + Gy*Gy) % p == (1 + d*Gx*Gx*Gy*Gy) % p```
+assert (a*Gx*Gx + Gy*Gy) % p == (1 + d*Gx*Gx*Gy*Gy) % p
+```
 
 assertimi përdoret për të kontrolluar nëse pika G shtrihet në lakoren Edwards nga parametrat a,d dhe p.
 Pra kontrollon nëse dy anët e funksionit janë të barabarta, për të siguruar që pika bazë e zgjedhur G, plotëson ekuacionin e lakorës së Edwardit.
@@ -133,7 +139,8 @@ message = text_to_int("Hi it is done")
 r = hashing(hashing(message) + message) % p
 R = apply_double_and_add_method(G, r, a, d, p)
 h = (R[0] + public_key[0] + message) % p
-s = (r + h + private_key)```
+s = (r + h + private_key)
+```
 
 Nënshkrimi përbëhët prej palëve (R,s) ku R është një pikë në lakore dhe s është një skalarë
 
@@ -142,7 +149,8 @@ Nënshkrimi përbëhët prej palëve (R,s) ku R është një pikë në lakore dh
 h = (R[0] + public_key[0] + message) % p
 P1 = apply_double_and_add_method(G, s, a, d, p)
 P2 = add_points(R, apply_double_and_add_method(public_key, h, a, d, p), a, d, p)
-assert P1[0] == P2[0] and P1[1] == P2[1]```
+assert P1[0] == P2[0] and P1[1] == P2[1]
+```
 
 Bëhet krahasimi i dy pikave në lakore, duke vertetësuar validitetin e nënshkrimit
 
